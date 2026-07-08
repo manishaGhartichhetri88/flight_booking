@@ -1,0 +1,28 @@
+
+> flight-booking-frontend@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.5
+  - Local:        http://localhost:3000
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 1994ms
+ ○ Compiling /forgot-password ...
+ ✓ Compiled /forgot-password in 5.1s (511 modules)
+ GET /forgot-password 200 in 5340ms
+ GET /forgot-password 200 in 5345ms
+ GET /forgot-password 200 in 645ms
+ GET /_next/static/webpack/63d1225caa386357.webpack.hot-update.json 404 in 5418ms
+ GET /_next/static/webpack/63d1225caa386357.webpack.hot-update.json 404 in 5436ms
+ GET /forgot-password 200 in 169ms
+ GET /forgot-password 200 in 163ms
+ GET /forgot-password 200 in 61ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1376ms (515 modules)
+ GET / 200 in 1651ms
+ GET /reset-password 200 in 1699ms
+ GET /reset-password?token=0c1b7742befa131f9a73e76cf35640e89ef0a8f65a19a46c70c43ac4076d04f7&email=workingoingon%40gmail.com 200 in 115ms
+ ○ Compiling /login ...
+ ✓ Compiled /login in 614ms (507 modules)
+ ✓ Compiled / in 115ms (266 modules)
