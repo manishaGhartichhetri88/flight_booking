@@ -10,7 +10,7 @@ export default function FlightsTable() {
 
   useEffect(() => {
     const loadFlights = async () => {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
+      const apiUrl = '/api/admin';
       try {
         const response = await fetch(`${apiUrl}/flights`);
         if (!response.ok) return;

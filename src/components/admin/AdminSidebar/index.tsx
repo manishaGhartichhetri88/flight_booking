@@ -1,9 +1,11 @@
 "use client";
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 
 export default function AdminSidebar() {
+  const pathname = usePathname();
   const items = [
     { href: '/admin', label: 'Dashboard' },
     { href: '/admin/flights', label: 'Flights' },
@@ -19,20 +21,25 @@ export default function AdminSidebar() {
   ];
 
   return (
-    <aside className="hidden lg:block w-64">
-      <div className="sticky top-6">
-        <div className="rounded-2xl bg-white p-4 shadow">
+    <aside className="w-full">
+      <div className="lg:sticky lg:top-24">
+        <div className="rounded-lg border border-slate-200 bg-white p-3 shadow-sm">
           <h3 className="text-sm font-semibold mb-4">Admin</h3>
-          <nav className="space-y-1 text-sm">
-            {items.map((item) => (
+          <nav className="grid grid-cols-2 gap-1 text-sm sm:grid-cols-3 lg:grid-cols-1">
+            {items.map((item) => {
+              const active = item.href === '/admin' ? pathname === item.href : pathname.startsWith(item.href);
+              return (
               <Link
                 key={item.href}
                 href={item.href}
-                className="block rounded px-3 py-2 hover:bg-slate-50"
+                className={`block rounded-md px-3 py-2 transition ${
+                  active ? 'bg-slate-950 font-medium text-white' : 'text-slate-700 hover:bg-slate-50 hover:text-slate-950'
+                }`}
               >
                 {item.label}
               </Link>
-            ))}
+              );
+            })}
           </nav>
         </div>
       </div>

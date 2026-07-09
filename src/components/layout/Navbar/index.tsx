@@ -2,12 +2,14 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import Avatar from '../Avatar';
 
 export default function Navbar() {
   const [user, setUser] = useState<{ name?: string; email?: string; photos?: string[] } | null>(null);
   const router = useRouter();
+  const pathname = usePathname();
+  const isAdminRoute = pathname?.startsWith('/admin');
 
   const fetchUser = async () => {
     // prefer cached user
@@ -58,6 +60,8 @@ export default function Navbar() {
     setUser(null);
     router.push('/');
   };
+
+  if (isAdminRoute) return null;
 
   return (
     <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-xl">

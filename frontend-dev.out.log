@@ -7,22 +7,12 @@
   - Environments: .env.local
 
  ✓ Starting...
- ✓ Ready in 1994ms
- ○ Compiling /forgot-password ...
- ✓ Compiled /forgot-password in 5.1s (511 modules)
- GET /forgot-password 200 in 5340ms
- GET /forgot-password 200 in 5345ms
- GET /forgot-password 200 in 645ms
- GET /_next/static/webpack/63d1225caa386357.webpack.hot-update.json 404 in 5418ms
- GET /_next/static/webpack/63d1225caa386357.webpack.hot-update.json 404 in 5436ms
- GET /forgot-password 200 in 169ms
- GET /forgot-password 200 in 163ms
- GET /forgot-password 200 in 61ms
- ○ Compiling / ...
- ✓ Compiled / in 1376ms (515 modules)
- GET / 200 in 1651ms
- GET /reset-password 200 in 1699ms
- GET /reset-password?token=0c1b7742befa131f9a73e76cf35640e89ef0a8f65a19a46c70c43ac4076d04f7&email=workingoingon%40gmail.com 200 in 115ms
- ○ Compiling /login ...
- ✓ Compiled /login in 614ms (507 modules)
- ✓ Compiled / in 115ms (266 modules)
+ ✓ Ready in 2.3s
+ ✓ Compiled /api/admin/[...path] in 434ms (53 modules)
+ GET /api/admin/health 200 in 1004ms
+ GET /api/admin/users 200 in 22ms
+ GET /api/admin/flights 200 in 19ms
+ GET /api/admin/bookings 200 in 17ms
+ ○ Compiling /admin ...
+ ✓ Compiled /admin in 3s (547 modules)
+ GET /admin 200 in 3234ms
