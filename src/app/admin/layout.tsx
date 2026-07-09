@@ -8,12 +8,12 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
       <AdminNavbar />
-      <div className="mx-auto max-w-7xl px-4 py-6 grid grid-cols-12 gap-6">
-        <div className="col-span-12 lg:col-span-2">
+      <div className="mx-auto grid w-full max-w-7xl gap-6 px-4 py-6 lg:grid-cols-[232px_minmax(0,1fr)]">
+        <div className="min-w-0">
           <AdminSidebar />
         </div>
 
-        <div className="col-span-12 lg:col-span-10">
+        <div className="min-w-0">
           {children}
         </div>
       </div>
