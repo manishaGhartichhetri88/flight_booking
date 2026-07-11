@@ -19,11 +19,16 @@ export function highlightMatch(text: string, query: string): React.ReactNode {
   const before = text.slice(0, idx);
   const match = text.slice(idx, idx + q.length);
   const after = text.slice(idx + q.length);
-  return (
-    <>
-      {before}
-      <mark className="rounded bg-yellow-200/60 px-0.5">{match}</mark>
-      {after}
-    </>
+
+  return React.createElement(
+    React.Fragment,
+    null,
+    before,
+    React.createElement(
+      'mark',
+      { className: 'rounded bg-yellow-200/60 px-0.5' },
+      match
+    ),
+    after
   );
 }
